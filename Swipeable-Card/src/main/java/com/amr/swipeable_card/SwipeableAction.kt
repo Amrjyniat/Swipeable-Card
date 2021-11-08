@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -20,6 +21,8 @@ data class Action(
     @DrawableRes val iconRes: Int? = null,
     val color: Color,
     val text: String = "",
+    val textColor: Color = Color.White,
+    val widthInDp: Dp = Dp.Unspecified,
     val onAction: () -> Unit
 )
 
@@ -31,6 +34,7 @@ fun SwipeableAction(
     Box(
         modifier = Modifier
             .height(actionHeightDp)
+            .width(action.widthInDp)
             .clickable { action.onAction() }
             .background(color = action.color)
             .padding(6.dp)
@@ -47,7 +51,7 @@ fun SwipeableAction(
         }
         Text(
             text = action.text,
-            color = Color.White,
+            color = action.textColor,
             modifier = Modifier
                 .padding(top = 4.dp)
                 .align(
