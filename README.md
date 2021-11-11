@@ -22,7 +22,7 @@ allprojects {
      }
 }
 ```
-Note: if you faced an issue with the firs step [check this out](https://stackoverflow.com/questions/69163511/build-was-configured-to-prefer-settings-repositories-over-project-repositories-b) 
+Note: if you faced an issue with the first step [check this out](https://stackoverflow.com/questions/69163511/build-was-configured-to-prefer-settings-repositories-over-project-repositories-b) 
 
 2. Add dependency:
   `implementation 'com.github.Amrjyniat:Swipeable-Card:1.0.0'`
