@@ -22,16 +22,7 @@ allprojects {
      }
 }
 ```
-Note: You need to add Jitpack to your **settings.gradle** file in the new adnroid projects instead of root build.gradle [check](https://stackoverflow.com/questions/69163511/build-was-configured-to-prefer-settings-repositories-over-project-repositories-b), like this:
-```
-dependencyResolutionManagement {
-	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-	 repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
-}
-```
+Note: if you faced an issue with the firs step [check this out](https://stackoverflow.com/questions/69163511/build-was-configured-to-prefer-settings-repositories-over-project-repositories-b) 
 
 2. Add dependency:
   `implementation 'com.github.Amrjyniat:Swipeable-Card:1.0.0'`
@@ -39,8 +30,8 @@ dependencyResolutionManagement {
 
 ## Features
 - Customize the background, text color and icon of the button.
-- Add unlimited buttons to the card by passing a list of `SwipeableAction.`
--  Work with both LTR and RTL layout directions.
+- Add unlimited buttons to the card by passing a list of `SwipeableAction`.
+- Work with both LTR and RTL layout directions.
 - You don't need to edit your card to make it swipeable, just add your card compose to the `SwipeableCard`.
 
 ![Alt Text](https://github.com/Amrjyniat/Swipeable-Card/blob/master/previews/video.gif)
@@ -82,4 +73,4 @@ You have three customizable areas in `SwipeableCard` composable fun:
 You can check out the [sample app](https://github.com/Amrjyniat/Swipeable-Card/tree/master/app/src/main "sample app") in the project to take a closer look of how to use it in real work.
 
 ## References:
-This library inpired from [here](https://proandroiddev.com/swipe-to-reveal-in-jetpack-compose-6ffa8928a4c2), Thanks Skyyo!
+This library inspired from [here](https://proandroiddev.com/swipe-to-reveal-in-jetpack-compose-6ffa8928a4c2), Thanks Skyyo!
